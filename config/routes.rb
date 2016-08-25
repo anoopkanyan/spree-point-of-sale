@@ -17,4 +17,9 @@ Spree::Core::Engine.routes.draw do
   get "admin/pos/index" , to: "admin/pos#new"
   post "admin/pos/update_stock_location/:number" , to: "admin/pos#update_stock_location", as: :update_stock_location_admin_pos
   get "admin/pos" , to: "admin/pos#new"
+  
+  namespace :api do
+     post "pos/associate/:number", to: 'pos#associate_user'
+  end
+  
 end

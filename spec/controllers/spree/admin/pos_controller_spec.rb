@@ -12,6 +12,8 @@ describe Spree::Admin::PosController do
   let(:address) { mock_model(Spree::Address) }
   let(:line_item_error_object) { ActiveModel::Errors.new(Spree::LineItem) }
   let(:shipment_error_object) { ActiveModel::Errors.new(Spree::Shipment) }
+  
+  
 
   before do
     allow(controller).to receive(:spree_current_user).and_return(user)
